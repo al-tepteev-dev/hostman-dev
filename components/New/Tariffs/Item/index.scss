@@ -1,0 +1,68 @@
+@import "assets/styles/new/mixins";
+
+.core {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.tariffItem {
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  @include desktop {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.price {
+  display: flex;
+
+  @include mobile {
+    order: -1;
+    flex-direction: column;
+  }
+
+  @include desktop {
+    align-items: center;
+    gap: 24px;
+  }
+}
+.priceValue {
+  display: flex;
+  align-items: flex-end;
+}
+.saveText {
+  margin-top: 8px;
+}
+.action {
+  @include mobile {
+    margin: 16px 0;
+  }
+}
+.cpu {
+  width: 92px;
+}
+.ram {
+  width: 46px;
+}
+.disk {
+  width: 70px;
+}
+.publicIpProp {
+  @include mobile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .label {
+      order: 1;
+    }
+  }
+  @include desktop {
+    display: grid;
+    gap: 4px;
+    justify-items: center;
+  }
+}
