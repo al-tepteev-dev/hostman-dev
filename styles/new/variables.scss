@@ -1,0 +1,95 @@
+@import "assets/styles/new/mixins";
+
+// font weights
+$font-family-inter:   'Inter', arial, sans-serif;
+
+$border-card-mobile: 16px;
+$border-card-desktop: 24px;
+
+$transition-duration: 200ms;
+$screen-1200: 1200px;
+
+:root {
+  /* Borders */
+  --border-control: 12px;
+
+  @include mobile {
+    --border-card: #{$border-card-mobile};
+    --gap-card: 20px;
+  }
+  @include desktop { 
+    --border-card: #{$border-card-desktop};
+    --gap-card: 24px;
+  }
+  
+  /* Paddings */
+  --padding-content-y: 20px;
+
+  @include mobile {
+    --paddings-control-md: 16px;
+    --gap-content-x: 56px;
+  }
+  @include desktop { 
+    --paddings-control-md: 20px;
+    --gap-content-x: 128px;
+  }
+
+  /* Screens */
+  --screen-1200: #{$screen-1200};
+  
+  /* Sizes */
+  --height-control-sm: 44px;
+
+  @include mobile {
+    --height-control-md: 44px;
+    --height-control-lg: 48px;
+  }
+  @include desktop { 
+    --height-control-md: 48px;
+    --height-control-lg: 56px;
+  }
+
+  /* Transitions */
+  --transition-duration: #{$transition-duration};
+  --transition-bg: background-color #{$transition-duration} ease-in-out;
+  --transition-color: color #{$transition-duration} ease-in-out;
+  --transition-all: all #{$transition-duration} ease-in-out;
+
+  /* Z */
+  --z-index-header: 8;
+  --z-index-popup: 1000;
+
+  /* Colors */
+  --surface-accent: #0452F2;
+  --surface-accent-hover: #0083FF;
+  --surface-primary: #181F38;
+  --surface-primary-hover: #242B47;
+  --surface-secondary: #050C26;
+  --surface-secondary-hover: #050C26;
+  --surface-white: #FFFFFF;
+  --surface-white-hover: #FFFFFF;
+  --surface-line: #242B47;
+  --surface-secondary-rgb: 5, 12, 38;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #78819D;
+  --text-disabled: #444B66;
+  --text-accent: #0452F2;
+
+  --link-accent: #0452F2;
+  --link-accent-hover: #0083FF;
+  --link-primary: #FFFFFF;
+  --link-primary-hover: #78819D;
+  --link-secondary: #78819D;
+  --link-secondary-hover: #FFFFFF;
+
+  --icon-accent: #0452F2;
+  --icon-primary: #646B85;
+  --icon-secondary: #FFFFFF;
+  
+  --status-sucess: #1CC14D;
+  --status-error: #EA4335;
+  --status-attention: #FBBC05;
+
+  --divider-color-rgba: rgba(217, 217, 217, 0.2);
+}

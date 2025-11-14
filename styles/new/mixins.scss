@@ -1,0 +1,37 @@
+$screen-sm: 768px; // mobile, up to
+$screen-1440: 1440px;
+
+@mixin mobile { // All mobiles
+  @media only screen and (max-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin link ($colorMain, $colorHover: var(--link-secondary)) {
+  color: $colorMain;
+  cursor: pointer;
+  transition: var(--transition-color);
+  
+  &:hover {
+    color: $colorHover;
+  }
+}
+
+@mixin fixContentJump {
+  max-width: calc(100vw - var(--scrollbar-width));
+}
+
+@mixin hideScrollbar {
+  overflow: auto !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
