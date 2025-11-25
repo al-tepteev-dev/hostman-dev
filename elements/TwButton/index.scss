@@ -1,0 +1,73 @@
+.primary {
+  background-color: $primary;
+  border-radius: $border-radius-input;
+  transition: $transition-default;
+  color: white;
+  border: none;
+  padding: 14px 24px !important;
+  width: fit-content;
+  height: auto;
+  text-transform: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: normal;
+  box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $secondary;
+    color: white;
+  }
+}
+
+.secondary {
+  background-color: white;
+  color: $black;
+  border: 1px solid $border-color;
+
+  &:hover {
+    background-color: $background-light-color;
+    color: $black;
+  }
+}
+
+.gray {
+  background-color: $gray;
+  color: $black;
+
+  &:hover {
+    background-color: $gray;
+    color: $primary;
+  }
+}
+
+.transparent {
+  background-color: rgba($white, 0.1);
+
+  &:hover {
+    background-color: rgba($white, 0.2);
+  }
+}
+
+.white {
+  background-color: white;
+  border: 1px solid $border-color;
+  color: $black;
+
+  &:hover {
+    background-color: white;
+    color: $primary !important;
+  }
+}
+
+.expanded {
+  width: 100%;
+}
+
+.disabled {
+  background-color: $gray;
+  color: $white;
+  cursor: default;
+  pointer-events: none;
+}

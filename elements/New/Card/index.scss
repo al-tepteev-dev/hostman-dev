@@ -1,0 +1,149 @@
+@import "assets/styles/new/mixins";
+
+@mixin animateHide() {
+  position: absolute;
+  bottom: -80px;
+  opacity: 0;
+}
+
+@mixin animateShow() {
+  position: absolute;
+  bottom: 0;
+  opacity: 1;
+}
+
+.cardCore {
+  border-radius: var(--border-card);
+  position: relative;
+}
+
+.backgroundPrimary {
+  background: var(--surface-primary);
+}
+
+.backgroundSecondary {
+  background: var(--surface-secondary);
+}
+
+.overflowHidden {
+  overflow: hidden;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.hoverable {
+  cursor: pointer;
+  transition: var(--transition-all);
+
+  &:hover {
+    background: var(--surface-primary-hover);
+
+    .cardLink {
+      color: var(--link-primary-hover);
+    }
+
+    .isHrefTypeButtonOnHover {
+      .cardLinkBtn {
+        @include animateShow();
+      }
+      .cardLink {
+        @include animateHide();
+      }
+    }
+  }
+}
+
+.cardContent {
+  height: 100%;
+  padding: 20px;
+  display: grid;
+  gap: 24px;
+  align-content: space-between;
+
+  @include desktop {
+    gap: 32px;
+    padding: 32px;
+  }
+}
+
+.cardWideContent {
+  &.std {
+    @include mobile {
+      padding: 32px !important;
+    }
+    @include desktop {
+      padding: 72px 78px !important;
+    }
+  }
+  &.compact {
+    @include mobile {
+      padding: 20px !important;
+    }
+    @include desktop {
+      padding: 72px !important;
+    }
+  }
+}
+
+.contentWrapper {
+  display: grid;
+  gap: 16px;
+}
+
+.textContent {
+  display: grid;
+  gap: 12px;
+}
+
+.linkTitleWrapper {
+  &.isHrefTypeButtonOnHover {
+    height: var(--height-control-md);
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.isHrefTypeButtonOnHover {
+  position: relative;
+
+  .cardLinkBtn {
+    transition: var(--transition-all);
+    @include animateHide();
+  }
+  .cardLink {
+    transition: var(--transition-all);
+    @include animateShow();
+  }
+}
+
+.cardLink {
+  transition: var(--transition-color);
+}
+
+.isFixedWidth {
+  width: 280px;
+
+  @include desktop {
+    width: 384px;
+  }
+}
+
+.imageBackground {
+  background-position: right center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.imageAbsoluteBottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.imageExpandedByWidth {
+  margin: 0 -32px -32px -32px;
+  width: calc(100% + 64px);
+  height: auto;
+}

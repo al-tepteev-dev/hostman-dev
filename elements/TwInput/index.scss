@@ -1,0 +1,73 @@
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: $border-radius-input;
+  color: $black;
+  transition: $transition-default;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 0 1px $border-color;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $black;
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px $black;
+  }
+
+  @media (min-width: $tablet) {
+    border-radius: $border-radius-input;
+  }
+}
+
+.mobileSearchWrapper {
+  border-radius: 0;
+  box-shadow: 0 0 0 1px $line-color !important;
+
+  & .searchIcon {
+    margin-left: 24px;
+  }
+
+  & .clearInputIcon {
+    margin-right: 24px;
+  }
+}
+
+.inputWrapper.danger {
+  box-shadow: 0 0 0 2px $danger;
+}
+
+.input {
+  padding: 16px 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  color: $black;
+  background-color: white;
+  border-radius: $border-radius-input;
+  box-sizing: initial;
+  height: 16px;
+}
+
+.mobileSearchInput {
+  border-radius: 0;
+  padding: 20px 16px;
+}
+
+.input::placeholder {
+  color: rgba($gray, 0.5);
+  opacity: 1;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type="number"] {
+  -moz-appearance: textfield;
+}
